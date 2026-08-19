@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <title></title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+<style>
+ 
+h1{
+    margin: auto;
+   color: wheat;
+  }
+.rounds{
+    color: white;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+}
+ .main{
+    margin:auto;
+    width: 300px;
+    height:450px;
+    background-color: rgb(44, 8, 78);
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+
+ }
+
+
+ button{
+    background-color: antiquewhite;
+    border: solid 2px;
+    border-radius: 15px;
+    margin:auto;
+    width: 100px;
+    height: 100px;
+ }
+
+
+
+</style>
+
+
+    <div class="main">
+
+        <h1 id="display">0</h1>
+       <div class="rounds"> <h4>Round:</h2>
+        <h4 id="round">0</h4></div>
+        <button id="Addition">➕</button>
+        <button id="Subtraction">➖</button>
+        <button id="Reset">Reset</button>
+
+
+    </div>
+    
+
+<script>
+
+let count=0;
+let Round=0;
+let increase=document.getElementById('Addition').onclick=()=>{
+    count++;
+    if(count>=108){
+        count=0;
+        Round++;  
+        document.getElementById('display').textContent=count;
+        document.getElementById('round').textContent=Round;
+
+    }else{
+    document.getElementById('display').textContent=count;
+
+    }
+
+
+};
+let decrease=document.getElementById('Subtraction').onclick=()=>{
+    count--;
+        document.getElementById('display').textContent=count;
+
+};
+let Reset=document.getElementById('Reset').onclick=()=>{
+
+count=0;
+        document.getElementById('display').textContent=count;
+
+
+}
+    
+</script>
+
+</body>
+</html>
